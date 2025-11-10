@@ -1,3 +1,5 @@
+# Create .gitignore file
+cat > .gitignore << EOF
 # Dependencies
 node_modules/
 backend/node_modules/
@@ -11,6 +13,14 @@ npm-debug.log*
 *.log
 logs/
 
+# Runtime data
+*.pid
+*.seed
+
+# Coverage
+coverage/
+.nyc_output
+
 # IDE
 .vscode/
 .idea/
@@ -22,5 +32,6 @@ logs/
 Thumbs.db
 desktop.ini
 
-# Data files (optional)
+# Data files (optional - remove if you want to track data.json)
 backend/data.json
+EOF
